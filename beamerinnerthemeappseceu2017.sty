@@ -58,25 +58,27 @@
     \vskip-\paperheight%
   % </background image>
   \@tempdima=\paperwidth%
-  \advance\@tempdima by -6mm
+  \advance\@tempdima by -66mm
   \advance\@tempdima by 0mm
   \@tempdimb=\paperheight
-  \advance\@tempdimb by -52mm
-  \mbox{}\vspace{-8mm}
-  \begin{beamercolorbox}[ht=1mm,sep=.1cm,wd=\@tempdima]{titlerule}
+  \advance\@tempdimb by -61mm
+  \@tempdimc=\paperwidth%
+  \advance\@tempdimc by -6mm
+  \advance\@tempdimc by 0mm
+  %\mbox{}\vspace{-8mm}
+  %\begin{beamercolorbox}[ht=1mm,sep=.1cm,wd=\@tempdima]{titlerule}
+  %\end{beamercolorbox}
+  %\mbox{}\vspace{-6mm}
+  \begin{beamercolorbox}[ht=10mm,sep=.2cm,ignorebg,wd=\@tempdima]{titlerule}
   \end{beamercolorbox}
-  \mbox{}\vspace{-6mm}
-  \begin{beamercolorbox}[ht=4mm,sep=.2cm,wd=\@tempdima]{titlerule}
-  \end{beamercolorbox}
-  \mbox{}\vspace{-5mm}\transparent{.80}\mbox{}%
-  \begin{beamercolorbox}[ht=42mm,sep=.2cm,center,wd=\@tempdima]{titleframe}
-    \vspace{-3mm}%
-    {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
+  \mbox{}\vspace{-5mm}{\transparent{.80}\mbox{}%
+  \hspace{-1cm}\begin{beamercolorbox}[ht=44mm,sep=.2cm,center,wd=\@tempdima]{titleframe}
+    {\usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\par}%
     \ifx\insertsubtitle\@empty%
-      \vskip0.7em%
+      \vskip0.1em%
       {\usebeamerfont{subtitle}\vMaxPhantom\par}%
     \else%
-      \vskip0.7em%
+      \vskip0.1em%
       {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\vMaxPhantom\par}%
     \fi%
     \vbox{}
@@ -91,14 +93,14 @@
       \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate
     \end{beamercolorbox}
   \end{beamercolorbox}
-  \vspace{2mm}
+  \vspace{2mm}}
   \begin{beamercolorbox}[ht=\@tempdimb,wd=\@tempdima,ignorebg]{lhWhite}
   \end{beamercolorbox}
     \vspace{1mm}
-  \begin{beamercolorbox}[wd=\@tempdima,ignorebg]{lhWhite}
+  \begin{beamercolorbox}[wd=\@tempdimc,ignorebg]{lhWhite}
       \raisebox{-\fboxsep}{{\setlength{\fboxsep}{0pt}
      \begin{picture}(0,0)
-        \put(-10,-4){\colorbox{white}{\quad\vbox to 10mm{\vfil\hbox to 44mm{\lhcomLogoLight[width=42mm]\enspace}\vfil}}}
+        \put(-10,-4){\colorbox{lhWhite}{\quad\vbox to 10mm{\vfil\hbox to 44mm{\lhcomLogoLight[width=42mm]\enspace}\vfil}}}
      \end{picture}}}%
     \hfill%
     {\partnerLogo[height=4mm]}%
