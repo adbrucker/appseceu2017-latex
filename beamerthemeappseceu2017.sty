@@ -318,7 +318,7 @@
   \advance\@tempdima by -6mm%
   \@tempdimb=\paperheight%
   \advance\@tempdimb by -29mm%
-  
+
 \begin{frame}[plain]
   \begin{beamercolorbox}[ht=1mm,sep=.1cm,wd=\@tempdima]{titlerule}
   \end{beamercolorbox}
@@ -421,8 +421,13 @@
 \NewEnviron{abstractframe}[1][]{%
 % \begin{frame}<beamer:0>{plain,label={fra:abstract-en},#1}
 \begin{frame}[label={fra:abstract-en},#1]
-     \centerline{\LARGE\textcolor{owaspOrange}{{\inserttitle: \insertsubtitle}}}
-    \bigskip\begin{abstract}\footnotesize
+     \begin{center}\LARGE\textcolor{owaspOrange}
+     {\inserttitle%
+     \ifx\insertsubtitle\empty\relax%
+      \else%
+     : \insertsubtitle%
+    \fi%
+    }\end{center}    \bigskip\begin{abstract}\footnotesize
     \BODY
   \end{abstract}\end{frame}
 }
